@@ -1,4 +1,22 @@
 ---
+- name: Create the node_exporter group
+  group:
+    name: "{{ alertmanager_irc_relay_system_group }}"
+    state: present
+    system: true
+  when: alertmanager_irc_relay_system_group != "root"
+
+- name: Create the node_exporter user
+  user:
+    name: "{{ alertmanager_irc_relay_system_user }}"
+    groups: "{{ alertmanager_irc_relay_system_group }}"
+    append: true
+    shell: /usr/sbin/nologin
+    system: true
+    create_home: false
+    home: /
+  when: alertmanager_irc_relay_system_user != "root"
+
 - name: Download alertmanager-irc-relay binary to local folder
   become: false
   get_url:
@@ -27,7 +45,7 @@
     dest: "/usr/local/bin/alertmanager-irc-relay"
     mode: 0755
   notify:
-    - restart alertmanager-irc-relay 
+    - restart alertmanager-irc-relay
 
 - name: Create configuration directory
   file:

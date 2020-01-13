@@ -3,4 +3,8 @@
   any_errors_fatal: true
   roles:
     - ansible-alertmanager-irc-relay
-  vars: []
+  vars:
+    alertmanager_irc_relay_system_user: "root"
+    alertmanager_irc_relay_system_group: "root"
+    alertmanager_irc_relay_http_host: "127.0.0.1"
+    alertmanager_irc_relay_http_port: 7000

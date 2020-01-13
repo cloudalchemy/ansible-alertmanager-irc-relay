@@ -1,19 +1,19 @@
 ---
 - include: preflight.yml
   tags:
-    - alertmanager-irc-relay_install
-    - alertmanager-irc-relay_configure
-    - alertmanager-irc-relay_run
+    - alertmanager_irc_relay_install
+    - alertmanager_irc_relay_configure
+    - alertmanager_irc_relay_run
 
 - include: install.yml
   become: true
   tags:
-    - alertmanager-irc-relay_install
+    - alertmanager_irc_relay_install
 
 - include: configure.yml
   become: true
   tags:
-    - alertmanager-irc-relay_configure
+    - alertmanager_irc_relay_configure
 
 - name: Ensure alertmanager-irc-relay is enabled on boot
   become: true
@@ -23,4 +23,4 @@
     state: started
     enabled: true
   tags:
-    - alertmanager-irc-relay_run
+    - alertmanager_irc_relay_run

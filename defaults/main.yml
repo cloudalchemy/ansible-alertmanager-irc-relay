@@ -1,12 +1,17 @@
 ---
 alertmanager_irc_relay_version: 0.1.0
+
+alertmanager_irc_relay_system_user: "ircrelay"
+alertmanager_irc_relay_system_group: "{{ alertmanager_irc_relay_system_user }}"
+
 alertmanager_irc_relay_http_host: "0.0.0.0"
 alertmanager_irc_relay_http_port: 8000
-alertmanager_irc_relay_irc_host: "chat.freenode.net" 
+
+alertmanager_irc_relay_irc_host: "chat.freenode.net"
 alertmanager_irc_relay_irc_port: 6697
-alertmanager_irc_relay_irc_nickname: "" 
-alertmanager_irc_relay_irc_nickname_password: "" 
-alertmanager_irc_relay_irc_realname: "" 
+alertmanager_irc_relay_irc_nickname: ""
+alertmanager_irc_relay_irc_nickname_password: ""
+alertmanager_irc_relay_irc_realname: ""
+
 alertmanager_irc_relay_notice_once_per_alert_group: "yes"
 alertmanager_irc_relay_notice_template: "Alert {{ .Labels.alertname }} on {{ .Labels.instance }} is {{ .Status }}"
-

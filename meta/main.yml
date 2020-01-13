@@ -2,7 +2,7 @@
 galaxy_info:
   author: Goutham Veeramachaneni
   description: Deploy alertmanager-irc-relay
-  role_name: alertmanager-irc-relay
+  role_name: alertmanager_irc_relay
   license: MIT
   company: none
   min_ansible_version: 2.7
