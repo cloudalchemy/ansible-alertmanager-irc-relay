@@ -24,9 +24,6 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 | `alertmanager_irc_relay_system_user` | "ircrelay" | System user used to run alertmanager-irc-relay |
 | `alertmanager_irc_relay_http_host` | "0.0.0.0" | The ip/interface to listen on. |
 | `alertmanager_irc_relay_http_port` | 8000 | The port to listen on. Note that the post and host combination has to be specified while configuring Alertmanager. |
-| `alertmanager_irc_relay_irc_host` | "chat.freenode.net" | The IRC host to connect to. |
-| `alertmanager_irc_relay_irc_port` | 6697 | The IRC port to connect to. |
-| `alertmanager_irc_relay_irc_nickname` | "" | The IRC nickname to connect with. |
 | `alertmanager_irc_relay_irc_nickname_password` | "" | The password if the nick requires a password. |
 | `alertmanager_irc_relay_irc_realname` | "" | The realname to connect with. |
 | `alertmanager_irc_relay_notice_once_per_alert_group` | "yes" | Send only one notice when webhook data is received. |
