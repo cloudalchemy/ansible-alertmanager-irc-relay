@@ -7,7 +7,7 @@
 
 ## Description
 
-Deploy [alertmanager-irc-relay](https://github.com/prometheus/alertmanager-irc-relay) using ansible.
+Deploy [alertmanager-irc-relay](https://github.com/gouthamve/alertmanager-irc-relay) using ansible.
 
 ## Requirements
 
