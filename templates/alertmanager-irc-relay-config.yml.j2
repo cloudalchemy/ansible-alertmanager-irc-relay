@@ -1,0 +1,41 @@
+# Start the HTTP server receiving alerts from Prometheus Webhook binding to
+# this host/port.
+#
+http_host: {{ alertmanager_irc_relay_http_host }} 
+http_port: {{ alertmanager_irc_relay_http_port }} 
+
+# Connect to this IRC host/port.
+#
+# Note: SSL is enabled by default, use "irc_use_ssl: no" to disable.
+irc_host: {{ alertmanager_irc_relay_irc_host }} 
+irc_port: {{ alertmanager_irc_relay_irc_port }}
+
+# Use this IRC nickname.
+irc_nickname: {{ alertmanager_irc_relay_irc_nickname }} 
+# Password used to identify with NickServ
+irc_nickname_password: {{ alertmanager_irc_relay_irc_nickname_password }} 
+# Use this IRC real name
+irc_realname: {{ alertmanager_irc_relay_irc_realname }} 
+
+# Optionally pre-join certain channels.
+#
+# Note: If an alert is sent to a non # pre-joined channel the bot will join
+# that channel anyway before sending the notice. Of course this cannot work
+# with password-protected channels.
+# irc_channels:
+#  - name: "#fosdem"
+
+# Define how IRC messages should be sent.
+#
+# Send only one notice when webhook data is received.
+# Note: By default a notice is sent for each alert in the webhook data.
+notice_once_per_alert_group: {{ alertmanager_irc_relay_notice_once_per_alert_group }} 
+
+# Define how IRC messages should be formatted.
+#
+# The formatting is based on golang's text/template.
+notice_template: {{ alertmanager_irc_relay_notice_template }} 
+# Note: When sending only one notice per alert group the default
+# notice_template is set to
+# "Alert {{ .GroupLabels.alertname }} for {{ .GroupLabels.job }} is {{ .Status }}"
+

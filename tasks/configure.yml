@@ -1,0 +1,21 @@
+---
+- name: Copy the alertmanager-irc-relay systemd service file
+  template:
+    src: alertmanager-irc-relay.service.j2
+    dest: /etc/systemd/system/alertmanager-irc-relay.service
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart alertmanager-irc-relay
+
+
+- name: Copy configuration file
+  template:
+    src: alertmanager-irc-relay-config.yml.j2 
+    dest: /etc/alertmanager-irc-relay/config.yml
+    owner: root
+    group: root
+    mode: 0644
+  no_log: "{{ 'true' if __testing_on_travis is defined else 'false' }}"
+  notify:
+    - restart alertmanager-irc-relay

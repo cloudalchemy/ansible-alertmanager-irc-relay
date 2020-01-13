@@ -1,0 +1,7 @@
+---
+- name: restart alertmanager-irc-relay
+  become: true
+  systemd:
+    daemon_reload: true
+    name: alertmanager-irc-relay
+    state: restarted

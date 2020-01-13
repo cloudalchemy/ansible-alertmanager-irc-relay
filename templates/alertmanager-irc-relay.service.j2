@@ -1,0 +1,19 @@
+{{ ansible_managed | comment }}
+
+[Unit]
+Description=alertmanager-irc-relay
+After=network-online.target
+StartLimitInterval=0
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User={{ alertmanager_irc_relay_system_user }}
+Group={{ alertmanager_irc_relay_system_group }}
+ExecStart=/usr/local/bin/alertmanager-irc-relay --config=/etc/alertmanager-irc-relay/config.yml
+SyslogIdentifier=alertmanager-irc-relay
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
