@@ -34,8 +34,7 @@ notice_once_per_alert_group: {{ alertmanager_irc_relay_notice_once_per_alert_gro
 # Define how IRC messages should be formatted.
 #
 # The formatting is based on golang's text/template.
-notice_template: {{ alertmanager_irc_relay_notice_template }} 
+notice_template: {{ alertmanager_irc_relay_notice_template }}
 # Note: When sending only one notice per alert group the default
 # notice_template is set to
-# "Alert {{ .GroupLabels.alertname }} for {{ .GroupLabels.job }} is {{ .Status }}"
-
+# "Alert {% raw %}{{ .GroupLabels.alertname }} for {{ .GroupLabels.job }} is {{ .Status }}{% endraw %}"

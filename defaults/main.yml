@@ -14,4 +14,4 @@ alertmanager_irc_relay_irc_nickname_password: ""
 alertmanager_irc_relay_irc_realname: ""
 
 alertmanager_irc_relay_notice_once_per_alert_group: "yes"
-alertmanager_irc_relay_notice_template: "Alert {{ .Labels.alertname }} on {{ .Labels.instance }} is {{ .Status }}"
+alertmanager_irc_relay_notice_template: "{% raw %}Alert {{ .Labels.alertname }} on {{ .Labels.instance }} is {{ .Status }}{% endraw %}"
