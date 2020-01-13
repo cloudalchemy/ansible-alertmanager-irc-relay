@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/cloudalchemy/ansible-alertmanager-irc-relay.svg?branch=master)](https://travis-ci.com/cloudalchemy/ansible-alertmanager-irc-relay)
 [![License](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT)
-[![Ansible Role](https://img.shields.io/badge/ansible%20role-cloudalchemy.alertmanager-irc-relay-blue.svg)](https://galaxy.ansible.com/cloudalchemy/alertmanager-irc-relay/)
+[![Ansible Role](https://img.shields.io/badge/ansible%20role-cloudalchemy.alertmanager_irc_relay-blue.svg)](https://galaxy.ansible.com/cloudalchemy/alertmanager_irc_relay/)
 [![GitHub tag](https://img.shields.io/github/tag/cloudalchemy/ansible-alertmanager-irc-relay.svg)](https://github.com/cloudalchemy/ansible-alertmanager-irc-relay/tags)
 
 ## Description
@@ -20,6 +20,8 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 | Name           | Default Value | Description                        |
 | -------------- | ------------- | -----------------------------------|
 | `alertmanager_irc_relay_version` | "0.1.0" | The version to download (from https://github.com/gouthamve/alertmanager-irc-relay/releases) |
+| `alertmanager_irc_relay_system_group` | "ircrelay" | System group used to run alertmanager-irc-relay |
+| `alertmanager_irc_relay_system_user` | "ircrelay" | System user used to run alertmanager-irc-relay |
 | `alertmanager_irc_relay_http_host` | "0.0.0.0" | The ip/interface to listen on. |
 | `alertmanager_irc_relay_http_port` | 8000 | The port to listen on. Note that the post and host combination has to be specified while configuring Alertmanager. |
 | `alertmanager_irc_relay_irc_host` | "chat.freenode.net" | The IRC host to connect to. |
@@ -38,7 +40,7 @@ Use it in a playbook as follows:
 ```yaml
 - hosts: all
   roles:
-    - cloudalchemy.alertmanager-irc-relay
+    - cloudalchemy.alertmanager_irc_relay
 ```
 
 ### Demo site
