@@ -1,12 +1,12 @@
 ---
-- name: Create the node_exporter group
+- name: Create the alertmanager-irc-relay group
   group:
     name: "{{ alertmanager_irc_relay_system_group }}"
     state: present
     system: true
   when: alertmanager_irc_relay_system_group != "root"
 
-- name: Create the node_exporter user
+- name: Create the alertmanager-irc-relay user
   user:
     name: "{{ alertmanager_irc_relay_system_user }}"
     groups: "{{ alertmanager_irc_relay_system_group }}"
