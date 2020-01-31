@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Fix typo [\#2](https://github.com/cloudalchemy/ansible-alertmanager-irc-relay/pull/2) ([SuperQ](https://github.com/SuperQ))
 - \[REPO SYNC\] Merge pull request \#4 from cloudalchemy/travis\_fix [\#1](https://github.com/cloudalchemy/ansible-alertmanager-irc-relay/pull/1) ([cloudalchemybot](https://github.com/cloudalchemybot))
 
 ## [0.0.1](https://galaxy.ansible.com/cloudalchemy/alertmanager-irc-relay) (2020-01-13)
