@@ -11,11 +11,11 @@ irc_host: {{ alertmanager_irc_relay_irc_host }}
 irc_port: {{ alertmanager_irc_relay_irc_port }}
 
 # Use this IRC nickname.
-irc_nickname: {{ alertmanager_irc_relay_irc_nickname }} 
+irc_nickname: {{ alertmanager_irc_relay_irc_nickname | quote }}
 # Password used to identify with NickServ
-irc_nickname_password: {{ alertmanager_irc_relay_irc_nickname_password }} 
+irc_nickname_password: {{ alertmanager_irc_relay_irc_nickname_password | quote }}
 # Use this IRC real name
-irc_realname: {{ alertmanager_irc_relay_irc_realname }} 
+irc_realname: {{ alertmanager_irc_relay_irc_realname | quote}}
 
 # Optionally pre-join certain channels.
 #
@@ -34,7 +34,7 @@ notice_once_per_alert_group: {{ alertmanager_irc_relay_notice_once_per_alert_gro
 # Define how IRC messages should be formatted.
 #
 # The formatting is based on golang's text/template.
-notice_template: {{ alertmanager_irc_relay_notice_template }}
+notice_template: {{ alertmanager_irc_relay_notice_template | quote }}
 # Note: When sending only one notice per alert group the default
 # notice_template is set to
 # "Alert {% raw %}{{ .GroupLabels.alertname }} for {{ .GroupLabels.job }} is {{ .Status }}{% endraw %}"
