@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Add support for pre-set IRC channels [\#5](https://github.com/cloudalchemy/ansible-alertmanager-irc-relay/pull/5) ([SuperQ](https://github.com/SuperQ))
 - Quote config template items [\#4](https://github.com/cloudalchemy/ansible-alertmanager-irc-relay/pull/4) ([SuperQ](https://github.com/SuperQ))
 - Fix typo [\#2](https://github.com/cloudalchemy/ansible-alertmanager-irc-relay/pull/2) ([SuperQ](https://github.com/SuperQ))
 - \[REPO SYNC\] Merge pull request \#4 from cloudalchemy/travis\_fix [\#1](https://github.com/cloudalchemy/ansible-alertmanager-irc-relay/pull/1) ([cloudalchemybot](https://github.com/cloudalchemybot))
