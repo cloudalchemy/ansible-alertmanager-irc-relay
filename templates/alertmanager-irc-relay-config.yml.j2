@@ -22,8 +22,10 @@ irc_realname: {{ alertmanager_irc_relay_irc_realname | quote}}
 # Note: If an alert is sent to a non # pre-joined channel the bot will join
 # that channel anyway before sending the notice. Of course this cannot work
 # with password-protected channels.
-# irc_channels:
-#  - name: "#fosdem"
+{% if alertmanager_irc_relay_channels != [] %}
+irc_channels:
+{{ alertmanager_irc_relay_channels | to_nice_yaml }}
+{% endif %}
 
 # Define how IRC messages should be sent.
 #

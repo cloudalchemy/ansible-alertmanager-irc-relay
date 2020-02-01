@@ -8,3 +8,5 @@
     alertmanager_irc_relay_system_group: "root"
     alertmanager_irc_relay_http_host: "127.0.0.1"
     alertmanager_irc_relay_http_port: 7000
+    alertmanager_irc_relay_channels:
+      - name: "#test-channel"

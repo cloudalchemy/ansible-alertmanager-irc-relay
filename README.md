@@ -31,6 +31,7 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 | `alertmanager_irc_relay_irc_realname` | "" | The realname to connect with. |
 | `alertmanager_irc_relay_notice_once_per_alert_group` | "yes" | Send only one notice when webhook data is received. |
 | `alertmanager_irc_relay_notice_template` | "Alert {{ .Labels.alertname }} on {{ .Labels.instance }} is {{ .Status }}" | The formatting is based on golang's text/template. |
+| `alertmanager_irc_relay_channels` | "[]" | A list of channels to join at startup.  |
 
 ## Example
 
