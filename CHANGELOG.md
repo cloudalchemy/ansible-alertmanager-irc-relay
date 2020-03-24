@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- \[REPO SYNC\] lock molecule to v2 [\#7](https://github.com/cloudalchemy/ansible-alertmanager-irc-relay/pull/7) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - Fix default template [\#6](https://github.com/cloudalchemy/ansible-alertmanager-irc-relay/pull/6) ([SuperQ](https://github.com/SuperQ))
 - Add support for pre-set IRC channels [\#5](https://github.com/cloudalchemy/ansible-alertmanager-irc-relay/pull/5) ([SuperQ](https://github.com/SuperQ))
 - Quote config template items [\#4](https://github.com/cloudalchemy/ansible-alertmanager-irc-relay/pull/4) ([SuperQ](https://github.com/SuperQ))
