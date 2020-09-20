@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- \[REPO SYNC\] add troubleshooting doc skeleton [\#9](https://github.com/cloudalchemy/ansible-alertmanager-irc-relay/pull/9) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] Add passlib as a test requirement [\#8](https://github.com/cloudalchemy/ansible-alertmanager-irc-relay/pull/8) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] lock molecule to v2 [\#7](https://github.com/cloudalchemy/ansible-alertmanager-irc-relay/pull/7) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - Fix default template [\#6](https://github.com/cloudalchemy/ansible-alertmanager-irc-relay/pull/6) ([SuperQ](https://github.com/SuperQ))
