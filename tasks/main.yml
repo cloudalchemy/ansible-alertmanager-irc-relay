@@ -1,17 +1,15 @@
 ---
-- include: preflight.yml
+- ansible.builtin.include_tasks: preflight.yml
   tags:
     - alertmanager_irc_relay_install
     - alertmanager_irc_relay_configure
     - alertmanager_irc_relay_run
 
-- include: install.yml
-  become: true
+- ansible.builtin.include_tasks: install.yml
   tags:
     - alertmanager_irc_relay_install
 
-- include: configure.yml
-  become: true
+- ansible.builtin.include_tasks: configure.yml
   tags:
     - alertmanager_irc_relay_configure
 
